@@ -2,17 +2,6 @@ import React from 'react';
 
 class Buttons extends React.Component {
 
-    constructor() {
-        super();
-
-        this.state = {
-            operator: "",
-            key: "",
-            clear: "AC"
-        }
-
-    }
-
     render() {
         return(
             <div className="calculator__keys" onClick={ this.props.onClick }>
@@ -31,7 +20,7 @@ class Buttons extends React.Component {
                 <button>3</button>
                 <button>0</button>
                 <button data-action="decimal">.</button>
-                <button data-action="clear">{ this.state.clear }</button>
+                <button data-action="clear">{ this.props.clear }</button>
                 <button className="key--equal" data-action="calculate">=</button>
             </div>
         )
