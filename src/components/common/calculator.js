@@ -42,10 +42,6 @@ class Calculator extends React.Component {
             clear: "AC",
         };
 
-        this.handleClick = this.handleClick.bind(this);
-        this.createResultString = this.createResultString.bind(this);
-        this.updateCalculatorState = this.updateCalculatorState.bind(this);
-        this.updateVisualState = this.updateVisualState.bind(this);
     }
 
     createResultString = (key, displayNum, state) => {
@@ -162,7 +158,7 @@ class Calculator extends React.Component {
         }
     }
 
-    handleClick(e) {
+    handleClick = (e) => {
         //key gets the whole element
         const key = e.target;
         const displayNum = this.state.displayNum;
